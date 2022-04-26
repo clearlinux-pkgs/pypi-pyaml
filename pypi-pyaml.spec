@@ -4,7 +4,7 @@
 #
 Name     : pypi-pyaml
 Version  : 21.10.1
-Release  : 49
+Release  : 50
 URL      : https://files.pythonhosted.org/packages/b6/f0/dbb524509ce28f5cfd4e1d9e3ef955f51186cfd1b8297f6e158778c4a8ef/pyaml-21.10.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b6/f0/dbb524509ce28f5cfd4e1d9e3ef955f51186cfd1b8297f6e158778c4a8ef/pyaml-21.10.1.tar.gz
 Summary  : PyYAML-based module to produce pretty and readable YAML-serialized data
@@ -14,9 +14,6 @@ Requires: pypi-pyaml-license = %{version}-%{release}
 Requires: pypi-pyaml-python = %{version}-%{release}
 Requires: pypi-pyaml-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: pyaml
-Provides: pyaml-python
-Provides: pyaml-python3
 BuildRequires : pypi(pyyaml)
 
 %description
@@ -61,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641472857
+export SOURCE_DATE_EPOCH=1651015681
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
