@@ -4,13 +4,14 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pyaml
-Version  : 23.9.1
-Release  : 63
-URL      : https://files.pythonhosted.org/packages/31/35/cf6f51ce61e32872e8ff8026166f185661d25c91316a8d18eb588e9c60ca/pyaml-23.9.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/31/35/cf6f51ce61e32872e8ff8026166f185661d25c91316a8d18eb588e9c60ca/pyaml-23.9.1.tar.gz
+Version  : 23.9.2
+Release  : 64
+URL      : https://files.pythonhosted.org/packages/2d/15/3ae32314fb0a5831e6f4c09f4278e6b53bfac2e0987ccae2ebd3135e79ab/pyaml-23.9.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2d/15/3ae32314fb0a5831e6f4c09f4278e6b53bfac2e0987ccae2ebd3135e79ab/pyaml-23.9.2.tar.gz
 Summary  : PyYAML-based module to produce a bit more pretty and readable YAML-serialized data
 Group    : Development/Tools
 License  : WTFPL
+Requires: pypi-pyaml-bin = %{version}-%{release}
 Requires: pypi-pyaml-license = %{version}-%{release}
 Requires: pypi-pyaml-python = %{version}-%{release}
 Requires: pypi-pyaml-python3 = %{version}-%{release}
@@ -23,6 +24,15 @@ BuildRequires : buildreq-distutils3
 pretty-yaml (or pyaml)
 ======================
 PyYAML_-based python module to produce a bit more pretty and human-readable YAML-serialized data.
+
+%package bin
+Summary: bin components for the pypi-pyaml package.
+Group: Binaries
+Requires: pypi-pyaml-license = %{version}-%{release}
+
+%description bin
+bin components for the pypi-pyaml package.
+
 
 %package license
 Summary: license components for the pypi-pyaml package.
@@ -53,10 +63,10 @@ python3 components for the pypi-pyaml package.
 
 
 %prep
-%setup -q -n pyaml-23.9.1
-cd %{_builddir}/pyaml-23.9.1
+%setup -q -n pyaml-23.9.2
+cd %{_builddir}/pyaml-23.9.2
 pushd ..
-cp -a pyaml-23.9.1 buildavx2
+cp -a pyaml-23.9.2 buildavx2
 popd
 
 %build
@@ -64,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693933081
+export SOURCE_DATE_EPOCH=1694011906
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -103,6 +113,10 @@ popd
 
 %files
 %defattr(-,root,root,-)
+
+%files bin
+%defattr(-,root,root,-)
+/usr/bin/pyaml
 
 %files license
 %defattr(0644,root,root,0755)
