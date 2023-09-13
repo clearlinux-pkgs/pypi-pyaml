@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pyaml
-Version  : 23.9.5
-Release  : 66
-URL      : https://files.pythonhosted.org/packages/f5/8c/1ebfddb355e8cf7fa0a2f719b590c1e4998134313ef1559664bdc0e167b5/pyaml-23.9.5.tar.gz
-Source0  : https://files.pythonhosted.org/packages/f5/8c/1ebfddb355e8cf7fa0a2f719b590c1e4998134313ef1559664bdc0e167b5/pyaml-23.9.5.tar.gz
+Version  : 23.9.6
+Release  : 67
+URL      : https://files.pythonhosted.org/packages/cc/f4/39797424cddabd63a1ced6b6876367646f8d7a739c5aaea63509af4de56f/pyaml-23.9.6.tar.gz
+Source0  : https://files.pythonhosted.org/packages/cc/f4/39797424cddabd63a1ced6b6876367646f8d7a739c5aaea63509af4de56f/pyaml-23.9.6.tar.gz
 Summary  : PyYAML-based module to produce a bit more pretty and readable YAML-serialized data
 Group    : Development/Tools
 License  : WTFPL
@@ -63,10 +63,10 @@ python3 components for the pypi-pyaml package.
 
 
 %prep
-%setup -q -n pyaml-23.9.5
-cd %{_builddir}/pyaml-23.9.5
+%setup -q -n pyaml-23.9.6
+cd %{_builddir}/pyaml-23.9.6
 pushd ..
-cp -a pyaml-23.9.5 buildavx2
+cp -a pyaml-23.9.6 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694446103
+export SOURCE_DATE_EPOCH=1694622344
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
