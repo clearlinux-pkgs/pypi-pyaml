@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pyaml
-URL = https://files.pythonhosted.org/packages/cc/f4/39797424cddabd63a1ced6b6876367646f8d7a739c5aaea63509af4de56f/pyaml-23.9.6.tar.gz
+URL = https://files.pythonhosted.org/packages/de/cb/be23c530f9f2442cb192326bfb6741fc0c76e7fb687d60d0286d776d0b0d/pyaml-23.9.7.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
