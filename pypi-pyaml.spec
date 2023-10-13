@@ -5,7 +5,7 @@
 #
 Name     : pypi-pyaml
 Version  : 23.9.7
-Release  : 68
+Release  : 69
 URL      : https://files.pythonhosted.org/packages/de/cb/be23c530f9f2442cb192326bfb6741fc0c76e7fb687d60d0286d776d0b0d/pyaml-23.9.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/de/cb/be23c530f9f2442cb192326bfb6741fc0c76e7fb687d60d0286d776d0b0d/pyaml-23.9.7.tar.gz
 Summary  : PyYAML-based module to produce a bit more pretty and readable YAML-serialized data
