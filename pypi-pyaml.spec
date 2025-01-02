@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : pypi-pyaml
-Version  : 24.12.1
-Release  : 76
-URL      : https://files.pythonhosted.org/packages/13/7e/b60f491b4ad461a5bd0cb930cd43940061b38968464085d8ec8242b58c86/pyaml-24.12.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/13/7e/b60f491b4ad461a5bd0cb930cd43940061b38968464085d8ec8242b58c86/pyaml-24.12.1.tar.gz
+Version  : 25.1.0
+Release  : 77
+URL      : https://files.pythonhosted.org/packages/f4/06/04b9c1907c13dc81729a9c6b4f42eab47baab7a8738ed5d2683eac215ad0/pyaml-25.1.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/f4/06/04b9c1907c13dc81729a9c6b4f42eab47baab7a8738ed5d2683eac215ad0/pyaml-25.1.0.tar.gz
 Summary  : PyYAML-based module to produce a bit more pretty and readable YAML-serialized data
 Group    : Development/Tools
 License  : WTFPL
@@ -65,10 +65,10 @@ python3 components for the pypi-pyaml package.
 
 
 %prep
-%setup -q -n pyaml-24.12.1
-cd %{_builddir}/pyaml-24.12.1
+%setup -q -n pyaml-25.1.0
+cd %{_builddir}/pyaml-25.1.0
 pushd ..
-cp -a pyaml-24.12.1 buildavx2
+cp -a pyaml-25.1.0 buildavx2
 popd
 
 %build
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1735098254
+export SOURCE_DATE_EPOCH=1735831584
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
